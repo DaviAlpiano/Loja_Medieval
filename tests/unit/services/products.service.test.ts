@@ -2,7 +2,7 @@ import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import ProductModel, { ProductInputtableTypes } from "../../../src/database/models/product.model";
 import { createProduct, product } from '../../mocks/product.mock'
-import productsServices from '../../../src/database/services/products.services';
+import productsServices from '../../../src/database/services/productsServices';
 
 describe('ProductsService', function () {
   beforeEach(function () { sinon.restore(); });

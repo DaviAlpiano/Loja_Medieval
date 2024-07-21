@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import productsServices from '../services/products.services';
+import productsServices from '../services/productsServices';
 import mapStatusHTTP, { HttpStatus } from '../utils/mapStatusHTTP';
 
 const postProduct = async (req: Request, res: Response): Promise<void> => {
