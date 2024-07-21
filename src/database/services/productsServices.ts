@@ -18,10 +18,9 @@ const postProduct = async (product:ProductInputtableTypes): Promise<ServiceRespo
 };
 
 const getProduct = async (): Promise<ServiceResponses> => {
-  const data = await ProductModel.findAll()
+  const data = await ProductModel.findAll();
   return { status: 'SUCCESSFUL', data };
 };
-
 
 export default {
   postProduct,
