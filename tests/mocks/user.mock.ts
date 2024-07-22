@@ -1,3 +1,4 @@
+import { password } from '../../src/database/config/database';
 import { User, ProductId } from '../../src/services/userServices';
 
 const users: User[] = [
@@ -30,7 +31,27 @@ const userResponse = [
     }
   ]
 
+const userLogin = {
+  id: 1,
+  username: 'Hagar',
+  password: '$2a$10$n2J4JBcaZ2/G.nc3/oVpWOEleBnY6Niw2YFp/SY8z5lH85EJa8dKu',
+  vocation: 'guerreiro',
+  level: 10,
+}
+
+const login = {
+  username: "Hagar",
+  password: "terrível"
+}
+
+const token = {
+  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJIYWdhciIsImlhdCI6MTcyMTY3MzI3OX0.i6Wras6ib8ZSV9S__kesQHpYSKg9rZiYCvFwQ4Csi0s"
+}
+
 export {
     users,
     userResponse,
+    userLogin,
+    login,
+    token,
 }
