@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import UserModel from '../../../src/database/models/user.model';
 import { users, userResponse } from '../../mocks/user.mock';
-import userServices from '../../../src/database/services/userServices';
+import userServices from '../../../src/services/userServices';
 import { Model } from 'sequelize';
 
 describe('UsersService', function () {

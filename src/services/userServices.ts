@@ -1,5 +1,5 @@
-import UserModel, { UserSequelizeModel } from '../models/user.model';
-import ProductModel from '../models/product.model';
+import UserModel, { UserSequelizeModel } from '../database/models/user.model';
+import ProductModel from '../database/models/product.model';
 
 type ServiceResponses = {
   status: string,

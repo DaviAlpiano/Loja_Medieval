@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import ProductModel, { ProductInputtableTypes, ProductSequelizeModel } from "../../../src/database/models/product.model";
 import { createProduct, product, products } from '../../mocks/product.mock'
-import productsServices from '../../../src/database/services/productsServices';
+import productsServices from '../../../src/services/productsServices';
 import { Model } from 'sequelize';
 
 describe('ProductsService', function () {

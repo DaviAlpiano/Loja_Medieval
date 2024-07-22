@@ -1,4 +1,4 @@
-import { User, ProductId } from '../../src/database/services/userServices';
+import { User, ProductId } from '../../src/services/userServices';
 
 const users: User[] = [
     {

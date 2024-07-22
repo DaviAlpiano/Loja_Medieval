@@ -1,5 +1,5 @@
 import ProductModel,
-{ ProductSequelizeModel, ProductInputtableTypes } from '../models/product.model';
+{ ProductSequelizeModel, ProductInputtableTypes } from '../database/models/product.model';
 
 type ServiceResponse = {
   status: string,

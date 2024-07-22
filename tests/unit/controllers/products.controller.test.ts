@@ -2,8 +2,8 @@ import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { Request, Response } from 'express';
-import productsServices from '../../../src/database/services/productsServices';
-import productsController  from '../../../src/database/controller/productsController'
+import productsServices from '../../../src/services/productsServices';
+import productsController  from '../../../src/controller/productsController'
 import { createProduct, products } from '../../mocks/product.mock';
 import ProductModel, { ProductSequelizeModel } from '../../../src/database/models/product.model';
 

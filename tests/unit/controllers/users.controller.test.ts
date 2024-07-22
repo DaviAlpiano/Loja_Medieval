@@ -2,9 +2,9 @@ import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { Request, Response } from 'express';
-import userServices from '../../../src/database/services/userServices';
+import userServices from '../../../src/services/userServices';
 import { userResponse } from '../../mocks/user.mock';
-import userController  from '../../../src/database/controller/userController'
+import userController  from '../../../src/controller/userController'
 import { UserSequelizeModel } from '../../../src/database/models/user.model';
 
 chai.use(sinonChai);
