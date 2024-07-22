@@ -1,10 +1,11 @@
 import express from 'express';
-import productRouter from './database/router/productsRouter';
+import Router from './database/router';
 
 const app = express();
 
 app.use(express.json());
 
-app.use('/products', productRouter);
+app.use('/products', Router.productsRouter);
+app.use('/users', Router.userRouter);
 
 export default app;

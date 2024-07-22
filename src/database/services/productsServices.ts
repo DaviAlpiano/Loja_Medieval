@@ -17,12 +17,12 @@ const postProduct = async (product:ProductInputtableTypes): Promise<ServiceRespo
   return { status: 'CREATED', data };
 };
 
-const getProduct = async (): Promise<ServiceResponses> => {
+const getProducts = async (): Promise<ServiceResponses> => {
   const data = await ProductModel.findAll();
   return { status: 'SUCCESSFUL', data };
 };
 
 export default {
   postProduct,
-  getProduct,
+  getProducts,
 };

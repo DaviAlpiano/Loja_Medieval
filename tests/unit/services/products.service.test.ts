@@ -19,7 +19,7 @@ describe('ProductsService', function () {
   it('Testando o getProduct', async function () {
     sinon.stub(ProductModel, 'findAll').resolves(products as unknown as Model<any, any>[]);
     
-    const response = await productsServices.getProduct();
+    const response = await productsServices.getProducts();
     expect(response.status).to.equal('SUCCESSFUL');
     expect(response.data).to.deep.equal(products);
   });

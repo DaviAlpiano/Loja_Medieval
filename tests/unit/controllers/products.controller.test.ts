@@ -43,14 +43,14 @@ describe('ProductsController', function () {
   });
 
   it('Testando o getProduct', async function () {
-    sinon.stub(productsServices, 'getProduct').resolves({ status: 'SUCCESSFUL', data: products as unknown as ProductSequelizeModel[] });
+    sinon.stub(productsServices, 'getProducts').resolves({ status: 'SUCCESSFUL', data: products as unknown as ProductSequelizeModel[] });
 
     const req = {} as Request;
     const res = {} as Response;
     res.status = sinon.stub().returnsThis(),
     res.json = sinon.stub(),
     
-    await productsController.getProduct(req, res);
+    await productsController.getProducts(req, res);
     expect(res.status).to.have.been.calledWith(200);
     expect(res.json).to.have.been.calledWith(products);
   });
