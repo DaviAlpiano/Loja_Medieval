@@ -3,9 +3,9 @@ import UserModel from '../database/models/user.model';
 import jwt from '../utils/jwt';
 
 type Login = {
-    status: string,
-    data: object,
-}
+  status: string,
+  data: object,
+};
 
 const login = async (username: string, password: string): Promise<Login> => {
   const data = await UserModel.findOne({ where: { username } });
@@ -16,7 +16,7 @@ const login = async (username: string, password: string): Promise<Login> => {
   const payload = {
     id: data.dataValues.id,
     username: data.dataValues.username,
-  }
+  };
 
   const token = jwt.sign(payload);
 

@@ -13,5 +13,5 @@ function sign(payload: TokenPayload): string {
 }
 
 export default {
-    sign,
+  sign,
 };

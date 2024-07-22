@@ -1,5 +1,5 @@
-import validateLogin from "./loginValidate";
+import validateLogin from './loginValidate';
 
 export default {
-    validateLogin,
-}
+  validateLogin,
+};

@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from 'express';
 import Schema from './Joi/schemas';
-import joiStatusHTTP from "./Joi/JoiStatusHTTP";
+import joiStatusHTTP from './Joi/JoiStatusHTTP';
 
 const validateLogin = (req: Request, res:Response, next: NextFunction) => {
   const login = req.body;

@@ -3,6 +3,6 @@ const httpErrorMap: { [key: string]: number } = {
   numbermin: 400,
 };
   
-const joiStatusHTTP = (status: string) => httpErrorMap[status.split('.').join('')] || 400;
+const joiStatusHTTP = (status: string): number => httpErrorMap[status.split('.').join('')] || 400;
   
 export default joiStatusHTTP;

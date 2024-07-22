@@ -1,8 +1,8 @@
-import Joi from "@hapi/joi";
+import Joi from '@hapi/joi';
 
 type Schemas = {
   loginSchema: Joi.ObjectSchema;
-}
+};
 const someRequired = '"username" and "password" are required';
 
 const loginSchema = Joi.object({
@@ -19,7 +19,7 @@ const loginSchema = Joi.object({
 });
 
 const schemas: Schemas = {
-  loginSchema
+  loginSchema,
 };
 
 export default schemas;
