@@ -4,6 +4,7 @@ import ProductModel, { ProductInputtableTypes, ProductSequelizeModel } from "../
 import { createProduct, product, products } from '../../mocks/product.mock'
 import productsServices from '../../../src/services/productsServices';
 import { Model } from 'sequelize';
+import UserModel from '../../../src/database/models/user.model';
 
 describe('ProductsService', function () {
   beforeEach(function () { sinon.restore(); });
@@ -14,6 +15,14 @@ describe('ProductsService', function () {
     const response = await productsServices.postProduct(product);
     expect(response.status).to.equal('CREATED');
     expect(response.data.dataValues).to.deep.equal(createProduct);
+  });
+
+  it('Testando o postProduct com id que nao existe', async function () {
+    sinon.stub(UserModel, 'findByPk').resolves(null);
+    
+    const response = await productsServices.postProduct(product);
+    expect(response.status).to.equal('INVALID_VALUE');
+    expect(response.data).to.deep.equal({ message: '"userId" not found' });
   });
 
   it('Testando o getProduct', async function () {
