@@ -9,7 +9,7 @@ services:
     # https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#non-root-user
     user: node
     # Nome do container para facilitar execução
-    container_name: trybesmith_api
+    container_name: smith_api
     # Mesmo que `docker run -t`
     tty: true
     # Mesmo que `docker run -i`
@@ -45,7 +45,7 @@ services:
 
   # Serviço que irá rodar o banco de dados
   db:
-    container_name: trybesmith_db
+    container_name: smith_db
     image: mysql:8.0.32
     restart: always
     # Lista de portas mapeadas de dentro para fora do container
