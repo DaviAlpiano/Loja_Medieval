@@ -29,7 +29,7 @@ npm install
     npm test
   ```
 
-## Estruturas dos endpoint de cadastro de produto 
+## Estruturas dos endpoint de cadastro de produto e login
 
 * O endpoint de cadastro deve receber a seguinte estrutura:
 
